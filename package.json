@@ -4,8 +4,8 @@
   "description": "B2B Marketing Agency Website",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node api.js && node server.js",
+    "dev": "node api.js && node server.js"
   },
   "dependencies": {
     "ejs": "^3.1.10",

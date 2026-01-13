@@ -1,6 +1,10 @@
 node_modules/
-.env
-.env.local
 *.log
 .DS_Store
 data/
+# Replit-specific files (not needed for local development)
+.replit
+replit.md
+.local/
+.config/static-web-server.toml
+config.bat
