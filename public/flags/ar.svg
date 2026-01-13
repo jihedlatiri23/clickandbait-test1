@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <clipPath id="circle-ar">
+      <circle cx="30" cy="30" r="30"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#circle-ar)">
+    <rect fill="#006233" width="60" height="60"/>
+    <circle cx="30" cy="30" r="18" fill="none" stroke="#fff" stroke-width="3"/>
+    <path d="M30 14 L32 24 L42 24 L34 30 L37 40 L30 34 L23 40 L26 30 L18 24 L28 24 Z" fill="#fff"/>
+    <circle cx="30" cy="30" r="8" fill="#006233"/>
+  </g>
+</svg>

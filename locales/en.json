@@ -1,0 +1,255 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "langName": "English",
+  "logo": "/logo-light.png",
+  "logoDark": "/logo-dark.png",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Media Buyiiiii",
+    "subtitle": "We help businesses of all sizes grow with strategic paid media campaigns and professional video content that converts prospects into customers.",
+    "cta1": "Book Strategy Call",
+    "cta2": "View Services"
+  },
+  "clients": {
+    "title": "Trusted by",
+    "logos": [
+      "client1.png",
+      "client2.png",
+      "client3.png",
+      "client4.png",
+      "client5.png",
+      "client6.png"
+    ]
+  },
+  "stats": {
+    "spending": "$10K+",
+    "spendingLabel": "Spending on Ads",
+    "clients": "130+",
+    "clientsLabel": "Clients",
+    "videos": "1000+",
+    "videosLabel": "Videos Produced",
+    "retention": "87%",
+    "retentionLabel": "Client Retention"
+  },
+  "services": {
+    "title": "What We Do",
+    "subtitle": "End-to-end marketing solutions for B2B and B2C businesses designed to drive leads and accelerate revenue",
+    "viewAll": "View All Services",
+    "items": [
+      {
+        "icon": "megaphone",
+        "title": "Strategic Media Buying",
+        "description": "Data-driven ad campaigns across Facebook, Instagram, TikTok, YouTube & LinkedIn to reach your ideal customers"
+      },
+      {
+        "icon": "video",
+        "title": "Video Production",
+        "description": "High-converting explainer videos, product demos, ads, and social content that engage and convert"
+      },
+      {
+        "icon": "chart",
+        "title": "Campaign Analytics",
+        "description": "Comprehensive tracking, attribution, and reporting to optimize your marketing ROI"
+      },
+      {
+        "icon": "rocket",
+        "title": "Growth Strategy",
+        "description": "Full-funnel marketing strategies designed for both B2B enterprises and B2C brands"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Why Businesses Choose Us",
+    "subtitle": "Whether you're a B2B enterprise or a B2C brand, we understand your unique challenges and deliver results that matter.",
+    "benefits": [
+      "Experience with both B2B lead generation and B2C e-commerce",
+      "Full-service video production from concept to delivery",
+      "Transparent reporting with real business metrics",
+      "Dedicated account team for personalized support"
+    ],
+    "videoTitle": "See Our Work",
+    "videoSubtitle": "Video showreel coming soon"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What industries do you work with?",
+        "answer": "We work with all kinds of businesses across every industry. Whether you're in e-commerce, real estate, healthcare, fitness, education, or any other sector, we tailor our strategies to fit your specific market and audience."
+      },
+      {
+        "question": "What's the minimum engagement for media buying?",
+        "answer": "There's no fixed minimum - it depends entirely on your needs and goals. We work with you to create a customized plan that fits your budget and delivers the best possible results for your business."
+      },
+      {
+        "question": "How long does video production take?",
+        "answer": "Timeline varies based on your specific project requirements. We work closely with you to understand your needs and deliver quality content within a timeframe that works for your business."
+      },
+      {
+        "question": "Do you offer packages?",
+        "answer": "Yes! All our packages are fully customized to your unique needs. We don't believe in one-size-fits-all solutions - we create tailored packages that combine the right mix of services to help you achieve your goals."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Scale Your Marketing?",
+    "subtitle": "Book a free 15-minute consultation and discover how we can help you generate more qualified leads.",
+    "button": "Book Free Consultation"
+  },
+  "booking": {
+    "title": "Book Your Free 15-Minute Consultation",
+    "subtitle": "Schedule a call with our team to discuss your marketing goals"
+  },
+  "footer": {
+    "copyright": "2025 ClickndBait Agency. All rights reserved."
+  },
+  "about": {
+    "title": "About ClickndBait Agency",
+    "intro": "We are a full-service marketing agency specializing in media buying and video production. Our mission is to help businesses grow through strategic digital marketing.",
+    "story": "Founded by marketing experts with over a decade of experience, ClickndBait Agency has helped hundreds of companies achieve their growth goals. We combine creativity with data-driven strategies to deliver results that matter.",
+    "values": {
+      "title": "Our Values",
+      "items": [
+        {
+          "title": "Excellence",
+          "description": "We deliver nothing but the best in every project we undertake."
+        },
+        {
+          "title": "Transparency",
+          "description": "Clear communication and honest reporting are at the core of our relationships."
+        },
+        {
+          "title": "Innovation",
+          "description": "We stay ahead of trends to give our clients a competitive edge."
+        },
+        {
+          "title": "Results",
+          "description": "Everything we do is focused on driving measurable business outcomes."
+        }
+      ]
+    }
+  },
+  "servicesPage": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive marketing solutions tailored to your business needs",
+    "details": [
+      {
+        "title": "Media Buying",
+        "description": "Strategic ad placement across all major platforms including Google, Facebook, LinkedIn, and YouTube. We optimize campaigns for maximum ROI.",
+        "features": [
+          "Platform strategy",
+          "Budget optimization",
+          "A/B testing",
+          "Performance tracking"
+        ]
+      },
+      {
+        "title": "Video Production",
+        "description": "From concept to final cut, we create compelling video content that engages your audience and drives conversions.",
+        "features": [
+          "Explainer videos",
+          "Product demos",
+          "Testimonials",
+          "Social content"
+        ]
+      },
+      {
+        "title": "Analytics & Reporting",
+        "description": "Comprehensive tracking and reporting to understand your marketing performance and make data-driven decisions.",
+        "features": [
+          "Custom dashboards",
+          "ROI tracking",
+          "Attribution modeling",
+          "Monthly reports"
+        ]
+      },
+      {
+        "title": "Growth Consulting",
+        "description": "Strategic guidance to help you scale your marketing efforts and achieve sustainable growth.",
+        "features": [
+          "Market analysis",
+          "Growth roadmap",
+          "Competitive research",
+          "Strategy workshops"
+        ]
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights and tips on marketing, video production, and growth strategies",
+    "readMore": "Read More",
+    "posts": [
+      {
+        "title": "5 Tips for Effective Media Buying in 2024",
+        "excerpt": "Learn the latest strategies for maximizing your ad spend and reaching your target audience effectively.",
+        "date": "January 10, 2024"
+      },
+      {
+        "title": "The Power of Video Marketing",
+        "excerpt": "Discover how video content can transform your marketing strategy and boost engagement.",
+        "date": "January 5, 2024"
+      },
+      {
+        "title": "Understanding Marketing Analytics",
+        "excerpt": "A beginner's guide to tracking and measuring your marketing performance.",
+        "date": "December 28, 2023"
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to start your next project? We'd love to hear from you.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "company": "Company",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "hello@clickndbait.com",
+      "phone": "+1 (555) 123-4567"
+    }
+  },
+  "intakeForm": {
+    "title": "Book Your Free Consultation",
+    "subtitle": "Please tell us about your needs so we can prepare for our call",
+    "reason": "What service are you interested in?",
+    "reasonOptions": {
+      "mediaBuying": "Media Buying (Meta/Facebook & Instagram Ads)",
+      "googleAds": "Media Buying (Google Ads)",
+      "videoEditing": "Video Editing & Production",
+      "other": "Other Marketing Service"
+    },
+    "otherReason": "Please describe the service you need",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "businessType": "Business Type",
+    "businessOptions": {
+      "b2b": "B2B (Business to Business)",
+      "b2c": "B2C (Business to Consumer)",
+      "both": "Both B2B & B2C",
+      "ecommerce": "E-commerce",
+      "startup": "Startup",
+      "agency": "Agency"
+    },
+    "company": "Company Name",
+    "website": "Website (optional)",
+    "budget": "Monthly Budget (optional)",
+    "budgetPlaceholder": "e.g. $5,000 or flexible",
+    "submit": "Continue to Schedule",
+    "cancel": "Cancel",
+    "required": "Required field"
+  }
+}

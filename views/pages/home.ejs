@@ -1,0 +1,130 @@
+<section class="hero">
+  <div class="container">
+    <h1><%= t.hero.title %></h1>
+    <p class="hero-subtitle"><%= t.hero.subtitle %></p>
+    <div class="hero-ctas">
+      <a href="#" onclick="openCalendly(); return false;" class="btn btn-primary btn-lg"><%= t.hero.cta1 %></a>
+      <a href="/<%= lang %>/services" class="btn btn-secondary btn-lg"><%= t.hero.cta2 %></a>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="container">
+    <p class="clients-title"><%= t.clients.title %></p>
+  </div>
+  <div class="clients-marquee">
+    <div class="clients-track">
+      <% for(let i = 0; i < 2; i++) { %>
+      <% t.clients.logos.forEach(function(logo) { %>
+      <div class="client-logo-item">
+        <img src="/clients/<%= logo %>" alt="Client" class="client-logo">
+      </div>
+      <% }); %>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-value"><%= t.stats.spending %></span>
+        <span class="stat-label"><%= t.stats.spendingLabel %></span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value"><%= t.stats.clients %></span>
+        <span class="stat-label"><%= t.stats.clientsLabel %></span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value"><%= t.stats.videos %></span>
+        <span class="stat-label"><%= t.stats.videosLabel %></span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value"><%= t.stats.retention %></span>
+        <span class="stat-label"><%= t.stats.retentionLabel %></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <h2><%= t.services.title %></h2>
+    <p class="section-subtitle"><%= t.services.subtitle %></p>
+    <div class="services-grid">
+      <% t.services.items.forEach(function(item) { %>
+      <div class="service-card">
+        <div class="service-icon">
+          <% if (item.icon === 'megaphone') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-5v12L3 13v-2z"></path><path d="M11.6 16.8a3 3 0 11-5.8-1.6"></path></svg>
+          <% } else if (item.icon === 'video') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          <% } else if (item.icon === 'chart') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <% } else if (item.icon === 'rocket') { %>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+          <% } %>
+        </div>
+        <h3><%= item.title %></h3>
+        <p><%= item.description %></p>
+      </div>
+      <% }); %>
+    </div>
+    <div class="services-cta">
+      <a href="/<%= lang %>/services" class="btn btn-outline"><%= t.services.viewAll %></a>
+    </div>
+  </div>
+</section>
+
+<section id="why-us" class="why-us">
+  <div class="container">
+    <div class="why-us-content">
+      <div class="why-us-text">
+        <h2><%= t.whyUs.title %></h2>
+        <p class="section-subtitle"><%= t.whyUs.subtitle %></p>
+        <ul class="benefits-list">
+          <% t.whyUs.benefits.forEach(function(benefit) { %>
+          <li><%= benefit %></li>
+          <% }); %>
+        </ul>
+      </div>
+      <div class="why-us-video">
+        <div class="video-placeholder">
+          <span><%= t.whyUs.videoTitle %></span>
+          <p><%= t.whyUs.videoSubtitle %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <div class="container">
+    <h2><%= t.faq.title %></h2>
+    <div class="faq-list">
+      <% t.faq.items.forEach(function(item) { %>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span><%= item.question %></span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p><%= item.answer %></p>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2><%= t.cta.title %></h2>
+    <p><%= t.cta.subtitle %></p>
+    <a href="#" onclick="openCalendly(); return false;" class="btn btn-primary btn-lg"><%= t.cta.button %></a>
+  </div>
+</section>

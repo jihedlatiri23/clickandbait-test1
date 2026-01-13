@@ -1,0 +1,113 @@
+<section class="page-hero">
+  <div class="container">
+    <h1><%= t.about.title %></h1>
+    <p class="hero-subtitle"><%= t.about.tagline || 'Your growth is our mission' %></p>
+  </div>
+</section>
+
+<section class="about-intro-section">
+  <div class="container">
+    <div class="about-intro-grid">
+      <div class="about-intro-content">
+        <span class="section-badge"><%= t.about.storyLabel || 'Our Story' %></span>
+        <p class="lead"><%= t.about.intro %></p>
+        <p><%= t.about.story %></p>
+      </div>
+      <div class="about-stats-box">
+        <div class="about-stat">
+          <span class="about-stat-value">2022</span>
+          <span class="about-stat-label"><%= t.about.foundedLabel || 'Founded' %></span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-value">130+</span>
+          <span class="about-stat-label"><%= t.about.clientsLabel || 'Happy Clients' %></span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat-value">1000+</span>
+          <span class="about-stat-label"><%= t.about.projectsLabel || 'Projects Delivered' %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mission-section">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="mission-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="18" stroke="white" stroke-width="3"/>
+            <circle cx="24" cy="24" r="10" stroke="white" stroke-width="3"/>
+            <circle cx="24" cy="24" r="3" fill="white"/>
+          </svg>
+        </div>
+        <h3><%= t.about.missionTitle || 'Our Mission' %></h3>
+        <p><%= t.about.missionText || 'To help businesses of all sizes achieve their growth goals through strategic marketing and compelling content.' %></p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 24C4 24 12 10 24 10C36 10 44 24 44 24C44 24 36 38 24 38C12 38 4 24 4 24Z" stroke="white" stroke-width="3"/>
+            <circle cx="24" cy="24" r="6" fill="white"/>
+          </svg>
+        </div>
+        <h3><%= t.about.visionTitle || 'Our Vision' %></h3>
+        <p><%= t.about.visionText || 'To be the trusted marketing partner that businesses turn to when they\'re ready to scale and succeed.' %></p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 42L8 26C4 22 4 16 8 12C12 8 18 8 22 12L24 14L26 12C30 8 36 8 40 12C44 16 44 22 40 26L24 42Z" fill="white"/>
+          </svg>
+        </div>
+        <h3><%= t.about.approachTitle || 'Our Approach' %></h3>
+        <p><%= t.about.approachText || 'We believe in personalized strategies, transparent communication, and measurable results that matter to your bottom line.' %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values-section">
+  <div class="container">
+    <h2><%= t.about.values.title %></h2>
+    <p class="section-subtitle"><%= t.about.valuesSubtitle || 'The principles that guide everything we do' %></p>
+    <div class="values-grid">
+      <% t.about.values.items.forEach(function(item, index) { %>
+      <div class="value-card">
+        <div class="value-icon">
+          <% if (index === 0) { %>
+          <svg viewBox="0 0 24 24" fill="white">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <% } else if (index === 1) { %>
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="white" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" fill="white"/>
+          </svg>
+          <% } else if (index === 2) { %>
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <% } else { %>
+          <svg viewBox="0 0 24 24" fill="none">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="17 6 23 6 23 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <% } %>
+        </div>
+        <h3><%= item.title %></h3>
+        <p><%= item.description %></p>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2><%= t.cta.title %></h2>
+    <p><%= t.cta.subtitle %></p>
+    <a href="#" onclick="openCalendly(); return false;" class="btn btn-primary btn-lg"><%= t.cta.button %></a>
+  </div>
+</section>

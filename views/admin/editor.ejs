@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Content - <%= lang.toUpperCase() %> - ClickndBait Admin</title>
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <div class="admin-wrapper">
+    <header class="admin-header">
+      <h1>📝 Edit Content: <%= lang.toUpperCase() %></h1>
+      <div class="header-actions">
+        <a href="/admin" class="btn-secondary">← Dashboard</a>
+        <a href="/<%= lang %>" target="_blank" class="btn-secondary">Preview</a>
+        <a href="/admin/logout" class="btn-secondary">Logout</a>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="editor-container">
+        <div class="editor-sidebar">
+          <h3>Content Sections</h3>
+          <nav class="section-nav">
+            <a href="#hero" class="nav-item active" data-section="hero">Hero Section</a>
+            <a href="#nav" class="nav-item" data-section="nav">Navigation</a>
+            <a href="#services" class="nav-item" data-section="services">Services</a>
+            <a href="#stats" class="nav-item" data-section="stats">Stats</a>
+            <a href="#faq" class="nav-item" data-section="faq">FAQ</a>
+            <a href="#about" class="nav-item" data-section="about">About</a>
+            <a href="#contact" class="nav-item" data-section="contactPage">Contact</a>
+            <a href="#cta" class="nav-item" data-section="cta">Call to Action</a>
+          </nav>
+        </div>
+
+        <div class="editor-content">
+          <div id="editor-form" class="editor-form">
+            <!-- Hero Section -->
+            <div class="section" id="section-hero">
+              <h2>Hero Section</h2>
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" id="hero-title" value="<%= (localeData.hero && localeData.hero.title) || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Subtitle</label>
+                <textarea id="hero-subtitle" rows="3"><%= (localeData.hero && localeData.hero.subtitle) || '' %></textarea>
+              </div>
+              <div class="form-group">
+                <label>Button 1 Text</label>
+                <input type="text" id="hero-cta1" value="<%= (localeData.hero && localeData.hero.cta1) || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Button 2 Text</label>
+                <input type="text" id="hero-cta2" value="<%= (localeData.hero && localeData.hero.cta2) || '' %>">
+              </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="section" id="section-nav" style="display:none;">
+              <h2>Navigation Labels</h2>
+              <% if (localeData.nav) { %>
+              <% Object.keys(localeData.nav).forEach(key => { %>
+              <div class="form-group">
+                <label><%= key.charAt(0).toUpperCase() + key.slice(1) %></label>
+                <input type="text" id="nav-<%= key %>" value="<%= localeData.nav[key] %>">
+              </div>
+              <% }); %>
+              <% } %>
+            </div>
+
+            <!-- Services -->
+            <div class="section" id="section-services" style="display:none;">
+              <h2>Services</h2>
+              <div class="form-group">
+                <label>Section Title</label>
+                <input type="text" id="services-title" value="<%= (localeData.services && localeData.services.title) || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Section Subtitle</label>
+                <textarea id="services-subtitle" rows="2"><%= (localeData.services && localeData.services.subtitle) || '' %></textarea>
+              </div>
+              
+              <% if (localeData.services && localeData.services.items) { %>
+              <% localeData.services.items.forEach((item, index) => { %>
+              <div class="service-item">
+                <h3>Service <%= index + 1 %></h3>
+                <div class="form-group">
+                  <label>Title</label>
+                  <input type="text" id="service-<%= index %>-title" value="<%= item.title %>">
+                </div>
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea id="service-<%= index %>-description" rows="2"><%= item.description %></textarea>
+                </div>
+              </div>
+              <% }); %>
+              <% } %>
+            </div>
+
+            <!-- Stats -->
+            <div class="section" id="section-stats" style="display:none;">
+              <h2>Statistics</h2>
+              <% if (localeData.stats) { %>
+              <div class="form-group">
+                <label>Spending Amount</label>
+                <input type="text" id="stats-spending" value="<%= localeData.stats.spending || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Spending Label</label>
+                <input type="text" id="stats-spendingLabel" value="<%= localeData.stats.spendingLabel || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Clients Number</label>
+                <input type="text" id="stats-clients" value="<%= localeData.stats.clients || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Clients Label</label>
+                <input type="text" id="stats-clientsLabel" value="<%= localeData.stats.clientsLabel || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Videos Number</label>
+                <input type="text" id="stats-videos" value="<%= localeData.stats.videos || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Videos Label</label>
+                <input type="text" id="stats-videosLabel" value="<%= localeData.stats.videosLabel || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Retention Percentage</label>
+                <input type="text" id="stats-retention" value="<%= localeData.stats.retention || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Retention Label</label>
+                <input type="text" id="stats-retentionLabel" value="<%= localeData.stats.retentionLabel || '' %>">
+              </div>
+              <% } %>
+            </div>
+
+            <!-- FAQ -->
+            <div class="section" id="section-faq" style="display:none;">
+              <h2>FAQ Section</h2>
+              <div class="form-group">
+                <label>Section Title</label>
+                <input type="text" id="faq-title" value="<%= (localeData.faq && localeData.faq.title) || '' %>">
+              </div>
+              
+              <% if (localeData.faq && localeData.faq.items) { %>
+              <% localeData.faq.items.forEach((item, index) => { %>
+              <div class="faq-item">
+                <h3>FAQ Item <%= index + 1 %></h3>
+                <div class="form-group">
+                  <label>Question</label>
+                  <input type="text" id="faq-<%= index %>-question" value="<%= item.question %>">
+                </div>
+                <div class="form-group">
+                  <label>Answer</label>
+                  <textarea id="faq-<%= index %>-answer" rows="3"><%= item.answer %></textarea>
+                </div>
+              </div>
+              <% }); %>
+              <% } %>
+            </div>
+
+            <!-- About -->
+            <div class="section" id="section-about" style="display:none;">
+              <h2>About Page</h2>
+              <% if (localeData.about) { %>
+              <div class="form-group">
+                <label>Page Title</label>
+                <input type="text" id="about-title" value="<%= localeData.about.title || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Introduction</label>
+                <textarea id="about-intro" rows="3"><%= localeData.about.intro || '' %></textarea>
+              </div>
+              <div class="form-group">
+                <label>Story</label>
+                <textarea id="about-story" rows="4"><%= localeData.about.story || '' %></textarea>
+              </div>
+              <% } %>
+            </div>
+
+            <!-- Contact -->
+            <div class="section" id="section-contactPage" style="display:none;">
+              <h2>Contact Page</h2>
+              <% if (localeData.contactPage) { %>
+              <div class="form-group">
+                <label>Page Title</label>
+                <input type="text" id="contact-title" value="<%= localeData.contactPage.title || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Page Subtitle</label>
+                <textarea id="contact-subtitle" rows="2"><%= localeData.contactPage.subtitle || '' %></textarea>
+              </div>
+              <% if (localeData.contactPage.info) { %>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="contact-email" value="<%= localeData.contactPage.info.email || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="text" id="contact-phone" value="<%= localeData.contactPage.info.phone || '' %>">
+              </div>
+              <% } %>
+              <% } %>
+            </div>
+
+            <!-- CTA -->
+            <div class="section" id="section-cta" style="display:none;">
+              <h2>Call to Action</h2>
+              <% if (localeData.cta) { %>
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" id="cta-title" value="<%= localeData.cta.title || '' %>">
+              </div>
+              <div class="form-group">
+                <label>Subtitle</label>
+                <textarea id="cta-subtitle" rows="2"><%= localeData.cta.subtitle || '' %></textarea>
+              </div>
+              <div class="form-group">
+                <label>Button Text</label>
+                <input type="text" id="cta-button" value="<%= localeData.cta.button || '' %>">
+              </div>
+              <% } %>
+            </div>
+
+            <div class="editor-actions">
+              <button id="save-btn" class="btn-primary">💾 Save Changes</button>
+              <span id="save-status" class="save-status"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const lang = '<%= lang %>';
+    const localeData = <%- JSON.stringify(localeData) %>;
+
+    // Navigation
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const section = item.getAttribute('data-section');
+        showSection(section);
+        document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+      document.getElementById('section-' + sectionId).style.display = 'block';
+    }
+
+    // Save functionality
+    document.getElementById('save-btn').addEventListener('click', async () => {
+      const statusEl = document.getElementById('save-status');
+      statusEl.textContent = 'Saving...';
+      statusEl.style.color = '#667eea';
+
+      try {
+        // Build updated data object
+        const updated = JSON.parse(JSON.stringify(localeData));
+
+        // Hero
+        updated.hero = {
+          title: document.getElementById('hero-title').value,
+          subtitle: document.getElementById('hero-subtitle').value,
+          cta1: document.getElementById('hero-cta1').value,
+          cta2: document.getElementById('hero-cta2').value
+        };
+
+        // Nav
+        Object.keys(updated.nav).forEach(key => {
+          const input = document.getElementById('nav-' + key);
+          if (input) updated.nav[key] = input.value;
+        });
+
+        // Services
+        if (updated.services) {
+          updated.services.title = document.getElementById('services-title').value;
+          updated.services.subtitle = document.getElementById('services-subtitle').value;
+          updated.services.items.forEach((item, index) => {
+            item.title = document.getElementById(`service-${index}-title`).value;
+            item.description = document.getElementById(`service-${index}-description`).value;
+          });
+        }
+
+        // Stats
+        if (updated.stats) {
+          Object.keys(updated.stats).forEach(key => {
+            const input = document.getElementById('stats-' + key);
+            if (input) updated.stats[key] = input.value;
+          });
+        }
+
+        // FAQ
+        if (updated.faq) {
+          updated.faq.title = document.getElementById('faq-title').value;
+          updated.faq.items.forEach((item, index) => {
+            item.question = document.getElementById(`faq-${index}-question`).value;
+            item.answer = document.getElementById(`faq-${index}-answer`).value;
+          });
+        }
+
+        // About
+        if (updated.about) {
+          updated.about.title = document.getElementById('about-title').value;
+          updated.about.intro = document.getElementById('about-intro').value;
+          updated.about.story = document.getElementById('about-story').value;
+        }
+
+        // Contact
+        if (updated.contactPage) {
+          updated.contactPage.title = document.getElementById('contact-title').value;
+          updated.contactPage.subtitle = document.getElementById('contact-subtitle').value;
+          if (updated.contactPage.info) {
+            updated.contactPage.info.email = document.getElementById('contact-email').value;
+            updated.contactPage.info.phone = document.getElementById('contact-phone').value;
+          }
+        }
+
+        // CTA
+        if (updated.cta) {
+          updated.cta.title = document.getElementById('cta-title').value;
+          updated.cta.subtitle = document.getElementById('cta-subtitle').value;
+          updated.cta.button = document.getElementById('cta-button').value;
+        }
+
+        // Send to server
+        const response = await fetch('/admin/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            lang: lang,
+            content: JSON.stringify(updated, null, 2)
+          })
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+          statusEl.textContent = '✓ Saved successfully!';
+          statusEl.style.color = '#10b981';
+          setTimeout(() => {
+            statusEl.textContent = '';
+          }, 3000);
+        } else {
+          throw new Error(result.error || 'Save failed');
+        }
+      } catch (error) {
+        statusEl.textContent = '✗ Error: ' + error.message;
+        statusEl.style.color = '#ef4444';
+      }
+    });
+  </script>
+</body>
+</html>

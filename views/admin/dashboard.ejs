@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - ClickndBait</title>
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <div class="admin-wrapper">
+    <header class="admin-header">
+      <h1>📝 Content Editor</h1>
+      <div class="header-actions">
+        <a href="/" target="_blank" class="btn-secondary">View Website</a>
+        <a href="/admin/logout" class="btn-secondary">Logout</a>
+      </div>
+    </header>
+    
+    <main class="admin-main">
+      <div class="dashboard">
+        <div class="welcome">
+          <h2>Welcome to Content Management</h2>
+          <p>Select a language to edit content</p>
+        </div>
+        
+        <div class="lang-cards">
+          <% supportedLangs.forEach(lang => { %>
+          <div class="lang-card">
+            <div class="lang-flag">
+              <% if (lang === 'en') { %>🇬🇧<% } %>
+              <% if (lang === 'fr') { %>🇫🇷<% } %>
+              <% if (lang === 'ar') { %>🇸🇦<% } %>
+            </div>
+            <h3>
+              <% if (lang === 'en') { %>English<% } %>
+              <% if (lang === 'fr') { %>Français<% } %>
+              <% if (lang === 'ar') { %>العربية<% } %>
+            </h3>
+            <a href="/admin/edit?lang=<%= lang %>" class="btn-primary">Edit Content</a>
+          </div>
+          <% }); %>
+        </div>
+        
+        <div class="info-box">
+          <h3>💡 Tips</h3>
+          <ul>
+            <li>All changes are saved automatically</li>
+            <li>Changes appear on website immediately</li>
+            <li>Be careful with JSON formatting</li>
+            <li>Backup your files regularly</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

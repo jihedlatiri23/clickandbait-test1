@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="<%= t.lang %>" dir="<%= t.dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | ClickndBait Agency</title>
+  <link rel="stylesheet" href="/style.css?v=19">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <% if (t.lang === 'ar') { %>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <% } %>
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script>
+    // Set Calendly URL from server (can be set via CALENDLY_URL environment variable)
+    // Update YOUR_USERNAME with your actual Calendly username
+    window.CALENDLY_URL = '<%= typeof CALENDLY_URL !== "undefined" ? CALENDLY_URL : "https://calendly.com/jihedlatiri/30min" %>';
+  </script>
+</head>
+<body>
+  <%- include('partials/header', { t, lang, page, currentPath }) %>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <%- include('partials/footer', { t }) %>
+
+  <div class="intake-modal" id="intakeModal">
+    <div class="intake-overlay" onclick="closeIntakeForm()"></div>
+    <div class="intake-content">
+      <button class="intake-close" onclick="closeIntakeForm()" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="intake-header">
+        <h2><%= t.intakeForm.title %></h2>
+        <p><%= t.intakeForm.subtitle %></p>
+      </div>
+      <form class="intake-form" id="intakeForm" onsubmit="submitIntakeForm(event)">
+        <div class="form-group">
+          <label for="intakeReason"><%= t.intakeForm.reason %> *</label>
+          <select id="intakeReason" name="reason" required onchange="toggleOtherReason()">
+            <option value="">--</option>
+            <option value="mediaBuying"><%= t.intakeForm.reasonOptions.mediaBuying %></option>
+            <option value="googleAds"><%= t.intakeForm.reasonOptions.googleAds %></option>
+            <option value="videoEditing"><%= t.intakeForm.reasonOptions.videoEditing %></option>
+            <option value="other"><%= t.intakeForm.reasonOptions.other %></option>
+          </select>
+        </div>
+        <div class="form-group" id="otherReasonGroup" style="display: none;">
+          <label for="otherReason"><%= t.intakeForm.otherReason %> *</label>
+          <input type="text" id="otherReason" name="otherReason">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="intakeFirstName"><%= t.intakeForm.firstName %> *</label>
+            <input type="text" id="intakeFirstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="intakeLastName"><%= t.intakeForm.lastName %> *</label>
+            <input type="text" id="intakeLastName" name="lastName" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="intakeEmail"><%= t.intakeForm.email %> *</label>
+            <input type="email" id="intakeEmail" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="intakePhone"><%= t.intakeForm.phone %></label>
+            <input type="tel" id="intakePhone" name="phone">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="intakeCompany"><%= t.intakeForm.company %> *</label>
+            <input type="text" id="intakeCompany" name="company" required>
+          </div>
+          <div class="form-group">
+            <label for="intakeWebsite"><%= t.intakeForm.website %></label>
+            <input type="url" id="intakeWebsite" name="website" placeholder="https://">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="intakeBusinessType"><%= t.intakeForm.businessType %> *</label>
+            <select id="intakeBusinessType" name="businessType" required>
+              <option value="">--</option>
+              <option value="b2b"><%= t.intakeForm.businessOptions.b2b %></option>
+              <option value="b2c"><%= t.intakeForm.businessOptions.b2c %></option>
+              <option value="both"><%= t.intakeForm.businessOptions.both %></option>
+              <option value="ecommerce"><%= t.intakeForm.businessOptions.ecommerce %></option>
+              <option value="startup"><%= t.intakeForm.businessOptions.startup %></option>
+              <option value="agency"><%= t.intakeForm.businessOptions.agency %></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="intakeBudget"><%= t.intakeForm.budget %></label>
+            <input type="text" id="intakeBudget" name="budget" placeholder="<%= t.intakeForm.budgetPlaceholder %>">
+          </div>
+        </div>
+        <div class="intake-actions">
+          <button type="button" class="btn btn-secondary" onclick="closeIntakeForm()"><%= t.intakeForm.cancel %></button>
+          <button type="submit" class="btn btn-primary"><%= t.intakeForm.submit %></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

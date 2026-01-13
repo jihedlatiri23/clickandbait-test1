@@ -1,0 +1,216 @@
+{
+  "lang": "fr",
+  "dir": "ltr",
+  "langName": "Français",
+  "logo": "/logo-light.png",
+  "logoDark": "/logo-dark.png",
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Achat Média & Production Vidéo",
+    "subtitle": "Nous aidons les entreprises à se développer grâce à des campagnes médias stratégiques et du contenu vidéo professionnel qui convertit les prospects en clients.",
+    "cta1": "Réserver un Appel",
+    "cta2": "Voir les Services"
+  },
+  "clients": {
+    "title": "Ils nous font confiance",
+    "logos": ["client1.png", "client2.png", "client3.png", "client4.png", "client5.png", "client6.png"]
+  },
+  "stats": {
+    "spending": "10K$+",
+    "spendingLabel": "Dépenses Pub",
+    "clients": "130+",
+    "clientsLabel": "Clients",
+    "videos": "1000+",
+    "videosLabel": "Vidéos Produites",
+    "retention": "87%",
+    "retentionLabel": "Fidélisation Client"
+  },
+  "services": {
+    "title": "Ce Que Nous Faisons",
+    "subtitle": "Solutions marketing complètes pour entreprises B2B et B2C conçues pour générer des leads et accélérer les revenus",
+    "viewAll": "Voir Tous les Services",
+    "items": [
+      {
+        "icon": "megaphone",
+        "title": "Achat Média Stratégique",
+        "description": "Campagnes publicitaires sur Facebook, Instagram, TikTok, YouTube et LinkedIn pour atteindre vos clients idéaux"
+      },
+      {
+        "icon": "video",
+        "title": "Production Vidéo",
+        "description": "Vidéos explicatives, démos produits, publicités et contenu social qui engagent et convertissent"
+      },
+      {
+        "icon": "chart",
+        "title": "Analyse de Campagne",
+        "description": "Suivi complet, attribution et reporting pour optimiser votre ROI marketing"
+      },
+      {
+        "icon": "rocket",
+        "title": "Stratégie de Croissance",
+        "description": "Stratégies marketing full-funnel pour entreprises B2B et marques B2C"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Pourquoi les Entreprises Nous Choisissent",
+    "subtitle": "Que vous soyez une entreprise B2B ou une marque B2C, nous comprenons vos défis uniques et livrons des résultats concrets.",
+    "benefits": [
+      "Expérience en génération de leads B2B et e-commerce B2C",
+      "Production vidéo complète du concept à la livraison",
+      "Reporting transparent avec de vraies métriques business",
+      "Équipe dédiée pour un accompagnement personnalisé"
+    ],
+    "videoTitle": "Voir Notre Travail",
+    "videoSubtitle": "Showreel vidéo bientôt disponible"
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "items": [
+      {
+        "question": "Avec quelles industries travaillez-vous ?",
+        "answer": "Nous travaillons avec tous types d'entreprises dans tous les secteurs. Que vous soyez dans l'e-commerce, l'immobilier, la santé, le fitness, l'éducation ou tout autre domaine, nous adaptons nos stratégies à votre marché et audience."
+      },
+      {
+        "question": "Quel est l'engagement minimum pour l'achat média ?",
+        "answer": "Il n'y a pas de minimum fixe - tout dépend de vos besoins et objectifs. Nous travaillons avec vous pour créer un plan personnalisé adapté à votre budget et offrant les meilleurs résultats possibles."
+      },
+      {
+        "question": "Combien de temps prend la production vidéo ?",
+        "answer": "Le délai varie selon les exigences spécifiques de votre projet. Nous travaillons étroitement avec vous pour comprendre vos besoins et livrer un contenu de qualité dans un délai qui convient à votre entreprise."
+      },
+      {
+        "question": "Proposez-vous des forfaits ?",
+        "answer": "Oui ! Tous nos forfaits sont entièrement personnalisés selon vos besoins uniques. Nous ne croyons pas aux solutions universelles - nous créons des forfaits sur mesure qui combinent le bon mix de services pour atteindre vos objectifs."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Développer Votre Marketing ?",
+    "subtitle": "Réservez une consultation gratuite de 15 minutes et découvrez comment nous pouvons vous aider à générer plus de leads qualifiés.",
+    "button": "Réserver une Consultation Gratuite"
+  },
+  "booking": {
+    "title": "Réservez Votre Consultation Gratuite de 15 Minutes",
+    "subtitle": "Planifiez un appel avec notre équipe pour discuter de vos objectifs marketing"
+  },
+  "footer": {
+    "copyright": "2025 ClickndBait Agency. Tous droits réservés."
+  },
+  "about": {
+    "title": "À Propos de ClickndBait Agency",
+    "intro": "Nous sommes une agence marketing complète spécialisée dans l'achat média et la production vidéo. Notre mission est d'aider les entreprises à croître grâce au marketing digital stratégique.",
+    "story": "Fondée par des experts marketing avec plus d'une décennie d'expérience, ClickndBait Agency a aidé des centaines d'entreprises à atteindre leurs objectifs de croissance.",
+    "values": {
+      "title": "Nos Valeurs",
+      "items": [
+        { "title": "Excellence", "description": "Nous ne livrons que le meilleur dans chaque projet." },
+        { "title": "Transparence", "description": "Communication claire et reporting honnête au cœur de nos relations." },
+        { "title": "Innovation", "description": "Nous restons en avance sur les tendances pour donner un avantage compétitif." },
+        { "title": "Résultats", "description": "Tout ce que nous faisons vise des résultats business mesurables." }
+      ]
+    }
+  },
+  "servicesPage": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions marketing complètes adaptées à vos besoins",
+    "details": [
+      {
+        "title": "Achat Média",
+        "description": "Placement stratégique de publicités sur toutes les grandes plateformes incluant Google, Facebook, LinkedIn et YouTube.",
+        "features": ["Stratégie plateforme", "Optimisation budget", "Tests A/B", "Suivi performance"]
+      },
+      {
+        "title": "Production Vidéo",
+        "description": "Du concept au montage final, nous créons du contenu vidéo captivant qui engage votre audience.",
+        "features": ["Vidéos explicatives", "Démos produit", "Témoignages", "Contenu social"]
+      },
+      {
+        "title": "Analytics & Reporting",
+        "description": "Suivi et reporting complets pour comprendre votre performance marketing.",
+        "features": ["Tableaux de bord", "Suivi ROI", "Modélisation attribution", "Rapports mensuels"]
+      },
+      {
+        "title": "Conseil en Croissance",
+        "description": "Accompagnement stratégique pour vous aider à développer vos efforts marketing.",
+        "features": ["Analyse marché", "Feuille de route", "Recherche concurrentielle", "Ateliers stratégie"]
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Conseils et insights sur le marketing, la production vidéo et les stratégies de croissance",
+    "readMore": "Lire Plus",
+    "posts": [
+      {
+        "title": "5 Conseils pour un Achat Média Efficace en 2024",
+        "excerpt": "Découvrez les dernières stratégies pour maximiser vos dépenses publicitaires.",
+        "date": "10 Janvier 2024"
+      },
+      {
+        "title": "Le Pouvoir du Marketing Vidéo",
+        "excerpt": "Découvrez comment le contenu vidéo peut transformer votre stratégie marketing.",
+        "date": "5 Janvier 2024"
+      },
+      {
+        "title": "Comprendre l'Analytics Marketing",
+        "excerpt": "Un guide pour débutants sur le suivi et la mesure de vos performances marketing.",
+        "date": "28 Décembre 2023"
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "Contactez-Nous",
+    "subtitle": "Prêt à démarrer votre prochain projet ? Nous serions ravis d'avoir de vos nouvelles.",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Adresse Email",
+      "company": "Entreprise",
+      "message": "Message",
+      "submit": "Envoyer le Message"
+    },
+    "info": {
+      "title": "Informations de Contact",
+      "email": "hello@clickndbait.com",
+      "phone": "+1 (555) 123-4567"
+    }
+  },
+  "intakeForm": {
+    "title": "Réservez Votre Consultation Gratuite",
+    "subtitle": "Parlez-nous de vos besoins pour que nous puissions préparer notre appel",
+    "reason": "Quel service vous intéresse ?",
+    "reasonOptions": {
+      "mediaBuying": "Achat Média (Meta/Facebook & Instagram)",
+      "googleAds": "Achat Média (Google Ads)",
+      "videoEditing": "Montage & Production Vidéo",
+      "other": "Autre Service Marketing"
+    },
+    "otherReason": "Décrivez le service dont vous avez besoin",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Adresse Email",
+    "phone": "Numéro de Téléphone",
+    "businessType": "Type d'Entreprise",
+    "businessOptions": {
+      "b2b": "B2B (Business to Business)",
+      "b2c": "B2C (Business to Consumer)",
+      "both": "B2B & B2C",
+      "ecommerce": "E-commerce",
+      "startup": "Startup",
+      "agency": "Agence"
+    },
+    "company": "Nom de l'Entreprise",
+    "website": "Site Web (optionnel)",
+    "budget": "Budget Mensuel (optionnel)",
+    "budgetPlaceholder": "ex: 5 000 $ ou flexible",
+    "submit": "Continuer vers la Réservation",
+    "cancel": "Annuler",
+    "required": "Champ obligatoire"
+  }
+}
